@@ -24,10 +24,10 @@
 		678C277B1A4085C0008090D9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 678C277A1A4085C0008090D9 /* libz.dylib */; };
 		678C277D1A4085C9008090D9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 678C277C1A4085C9008090D9 /* libsqlite3.dylib */; };
 		678C27841A408715008090D9 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678C277F1A408715008090D9 /* LogInViewController.m */; };
-		678C27851A408715008090D9 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678C27811A408715008090D9 /* SignUpViewController.m */; };
-		678C27861A408715008090D9 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678C27831A408715008090D9 /* ConfigViewController.m */; };
 		678C278B1A40896E008090D9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678C278A1A40896E008090D9 /* Social.framework */; };
 		678C278D1A408988008090D9 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678C278C1A408988008090D9 /* Accounts.framework */; };
+		790334C41A40B2D700335356 /* SchedulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790334C11A40B2D700335356 /* SchedulesViewController.m */; };
+		790334C81A40B30300335356 /* PersonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790334C71A40B30300335356 /* PersonsViewController.m */; };
 		79C595DD1A3F5D2E00FFFEA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C595DC1A3F5D2E00FFFEA2 /* main.m */; };
 		79C595E01A3F5D2F00FFFEA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C595DF1A3F5D2F00FFFEA2 /* AppDelegate.m */; };
 		79C595E61A3F5D2F00FFFEA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C595E41A3F5D2F00FFFEA2 /* Main.storyboard */; };
@@ -65,12 +65,12 @@
 		678C277C1A4085C9008090D9 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		678C277E1A408715008090D9 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		678C277F1A408715008090D9 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
-		678C27801A408715008090D9 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
-		678C27811A408715008090D9 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
-		678C27821A408715008090D9 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
-		678C27831A408715008090D9 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
 		678C278A1A40896E008090D9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		678C278C1A408988008090D9 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		790334C01A40B2D700335356 /* SchedulesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchedulesViewController.h; sourceTree = "<group>"; };
+		790334C11A40B2D700335356 /* SchedulesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchedulesViewController.m; sourceTree = "<group>"; };
+		790334C61A40B30300335356 /* PersonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonsViewController.h; sourceTree = "<group>"; };
+		790334C71A40B30300335356 /* PersonsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonsViewController.m; sourceTree = "<group>"; };
 		79C595D71A3F5D2E00FFFEA2 /* ScheduleTreatment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleTreatment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C595DB1A3F5D2E00FFFEA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79C595DC1A3F5D2E00FFFEA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -133,6 +133,8 @@
 		678C27671A40841B008090D9 /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				678C278C1A408988008090D9 /* Accounts.framework */,
+				678C278A1A40896E008090D9 /* Social.framework */,
 				678C277C1A4085C9008090D9 /* libsqlite3.dylib */,
 				678C277A1A4085C0008090D9 /* libz.dylib */,
 				678C27781A4085B7008090D9 /* SystemConfiguration.framework */,
@@ -156,6 +158,7 @@
 		678C27871A408720008090D9 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				790334C91A40B32200335356 /* navigator */,
 				678C278E1A408B16008090D9 /* login */,
 			);
 			name = controller;
@@ -166,19 +169,24 @@
 			children = (
 				678C277E1A408715008090D9 /* LogInViewController.h */,
 				678C277F1A408715008090D9 /* LogInViewController.m */,
-				678C27801A408715008090D9 /* SignUpViewController.h */,
-				678C27811A408715008090D9 /* SignUpViewController.m */,
-				678C27821A408715008090D9 /* ConfigViewController.h */,
-				678C27831A408715008090D9 /* ConfigViewController.m */,
 			);
 			name = login;
+			sourceTree = "<group>";
+		};
+		790334C91A40B32200335356 /* navigator */ = {
+			isa = PBXGroup;
+			children = (
+				790334C01A40B2D700335356 /* SchedulesViewController.h */,
+				790334C11A40B2D700335356 /* SchedulesViewController.m */,
+				790334C61A40B30300335356 /* PersonsViewController.h */,
+				790334C71A40B30300335356 /* PersonsViewController.m */,
+			);
+			name = navigator;
 			sourceTree = "<group>";
 		};
 		79C595CE1A3F5D2D00FFFEA2 = {
 			isa = PBXGroup;
 			children = (
-				678C278C1A408988008090D9 /* Accounts.framework */,
-				678C278A1A40896E008090D9 /* Social.framework */,
 				678C27671A40841B008090D9 /* framework */,
 				79C595D91A3F5D2E00FFFEA2 /* ScheduleTreatment */,
 				79C595F31A3F5D3100FFFEA2 /* ScheduleTreatmentTests */,
@@ -335,9 +343,9 @@
 			files = (
 				678C27841A408715008090D9 /* LogInViewController.m in Sources */,
 				79C595E01A3F5D2F00FFFEA2 /* AppDelegate.m in Sources */,
-				678C27861A408715008090D9 /* ConfigViewController.m in Sources */,
-				678C27851A408715008090D9 /* SignUpViewController.m in Sources */,
 				79C595DD1A3F5D2E00FFFEA2 /* main.m in Sources */,
+				790334C81A40B30300335356 /* PersonsViewController.m in Sources */,
+				790334C41A40B2D700335356 /* SchedulesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +474,7 @@
 					"$(PROJECT_DIR)/ScheduleTreatment/framework",
 				);
 				INFOPLIST_FILE = ScheduleTreatment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -480,6 +489,7 @@
 					"$(PROJECT_DIR)/ScheduleTreatment/framework",
 				);
 				INFOPLIST_FILE = ScheduleTreatment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
