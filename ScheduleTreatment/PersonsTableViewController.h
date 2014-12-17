@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PersonsTableViewController : UITableViewController
-
+@property (nonatomic, strong) NSArray *list;
 @end
