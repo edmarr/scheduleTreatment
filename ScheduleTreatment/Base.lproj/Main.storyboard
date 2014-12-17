@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iEp-fh-j3V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iEp-fh-j3V">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Log In View Controller-->
@@ -54,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="1555" y="-435"/>
         </scene>
-        <!--View Controller-->
+        <!--Schedules View Controller-->
         <scene sceneID="kdW-c6-266">
             <objects>
-                <viewController id="jhg-qc-LmW" sceneMemberID="viewController">
+                <viewController id="jhg-qc-LmW" customClass="SchedulesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fuE-YM-Mo0"/>
                         <viewControllerLayoutGuide type="bottom" id="41Z-22-6zE"/>
@@ -65,9 +66,28 @@
                     <view key="view" contentMode="scaleToFill" id="bqQ-Ue-Pjq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czH-N9-fdc">
+                                <rect key="frame" x="524" y="20" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout:" destination="jhg-qc-LmW" eventType="touchUpInside" id="QVe-2o-JBm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="czH-N9-fdc" firstAttribute="top" secondItem="fuE-YM-Mo0" secondAttribute="bottom" id="98j-th-T4d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="czH-N9-fdc" secondAttribute="trailing" constant="14" id="SMc-Id-lfb"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="time-24" id="myP-bY-Rzg"/>
+                    <connections>
+                        <outlet property="btnLogout" destination="czH-N9-fdc" id="Chc-mW-uqC"/>
+                        <segue destination="iEp-fh-j3V" kind="show" identifier="loginScheduleSegue" id="50Z-Ir-PUe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gk5-Kc-r4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,7 +110,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Yg-K2-0AY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="823" y="-892"/>
+            <point key="canvasLocation" x="783" y="-526"/>
         </scene>
     </scenes>
     <resources>

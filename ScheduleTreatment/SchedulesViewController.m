@@ -7,6 +7,7 @@
 //
 
 #import "SchedulesViewController.h"
+#import <Parse/Parse.h>
 
 @interface SchedulesViewController ()
 
@@ -16,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.btnLogout setTitle:NSLocalizedString(@"Logout", nil) forState:0 ];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"MainBG.png"]]];
     // Do any additional setup after loading the view.
 }
 
@@ -34,4 +37,10 @@
 }
 */
 
+- (IBAction)logout:(id)sender {
+    [PFUser logOut];
+    [self.navigationController popViewControllerAnimated:YES];
+    [self performSegueWithIdentifier:@"loginScheduleSegue" sender:self ];
+
+}
 @end

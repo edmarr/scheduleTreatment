@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SchedulesViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+- (IBAction)logout:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *btnLogout;
 
 @end
