@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		678669C61A41D72F00D69EED /* SchedulesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678669C51A41D72F00D69EED /* SchedulesTableViewController.m */; };
+		678669C91A41D74900D69EED /* PersonsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678669C81A41D74900D69EED /* PersonsTableViewController.m */; };
+		678669CF1A41DC3500D69EED /* NewPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678669CE1A41DC3500D69EED /* NewPersonViewController.m */; };
 		678C27621A408408008090D9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678C275D1A408408008090D9 /* Bolts.framework */; };
 		678C27631A408408008090D9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678C275E1A408408008090D9 /* Parse.framework */; };
 		678C27641A408408008090D9 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678C275F1A408408008090D9 /* ParseCrashReporting.framework */; };
@@ -26,8 +29,6 @@
 		678C27841A408715008090D9 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678C277F1A408715008090D9 /* LogInViewController.m */; };
 		678C278B1A40896E008090D9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678C278A1A40896E008090D9 /* Social.framework */; };
 		678C278D1A408988008090D9 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678C278C1A408988008090D9 /* Accounts.framework */; };
-		790334C41A40B2D700335356 /* SchedulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790334C11A40B2D700335356 /* SchedulesViewController.m */; };
-		790334C81A40B30300335356 /* PersonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790334C71A40B30300335356 /* PersonsViewController.m */; };
 		79C595DD1A3F5D2E00FFFEA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C595DC1A3F5D2E00FFFEA2 /* main.m */; };
 		79C595E01A3F5D2F00FFFEA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C595DF1A3F5D2F00FFFEA2 /* AppDelegate.m */; };
 		79C595E61A3F5D2F00FFFEA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C595E41A3F5D2F00FFFEA2 /* Main.storyboard */; };
@@ -47,6 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		678669C41A41D72F00D69EED /* SchedulesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchedulesTableViewController.h; sourceTree = "<group>"; };
+		678669C51A41D72F00D69EED /* SchedulesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchedulesTableViewController.m; sourceTree = "<group>"; };
+		678669C71A41D74900D69EED /* PersonsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonsTableViewController.h; sourceTree = "<group>"; };
+		678669C81A41D74900D69EED /* PersonsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonsTableViewController.m; sourceTree = "<group>"; };
+		678669CD1A41DC3500D69EED /* NewPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPersonViewController.h; sourceTree = "<group>"; };
+		678669CE1A41DC3500D69EED /* NewPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPersonViewController.m; sourceTree = "<group>"; };
 		678C275D1A408408008090D9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ScheduleTreatment/framework/Bolts.framework; sourceTree = "<group>"; };
 		678C275E1A408408008090D9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ScheduleTreatment/framework/Parse.framework; sourceTree = "<group>"; };
 		678C275F1A408408008090D9 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = ScheduleTreatment/framework/ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -67,10 +74,6 @@
 		678C277F1A408715008090D9 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		678C278A1A40896E008090D9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		678C278C1A408988008090D9 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		790334C01A40B2D700335356 /* SchedulesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchedulesViewController.h; sourceTree = "<group>"; };
-		790334C11A40B2D700335356 /* SchedulesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchedulesViewController.m; sourceTree = "<group>"; };
-		790334C61A40B30300335356 /* PersonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonsViewController.h; sourceTree = "<group>"; };
-		790334C71A40B30300335356 /* PersonsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonsViewController.m; sourceTree = "<group>"; };
 		79C595D71A3F5D2E00FFFEA2 /* ScheduleTreatment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleTreatment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C595DB1A3F5D2E00FFFEA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79C595DC1A3F5D2E00FFFEA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -177,10 +180,12 @@
 		790334C91A40B32200335356 /* navigator */ = {
 			isa = PBXGroup;
 			children = (
-				790334C01A40B2D700335356 /* SchedulesViewController.h */,
-				790334C11A40B2D700335356 /* SchedulesViewController.m */,
-				790334C61A40B30300335356 /* PersonsViewController.h */,
-				790334C71A40B30300335356 /* PersonsViewController.m */,
+				678669C41A41D72F00D69EED /* SchedulesTableViewController.h */,
+				678669C51A41D72F00D69EED /* SchedulesTableViewController.m */,
+				678669C71A41D74900D69EED /* PersonsTableViewController.h */,
+				678669C81A41D74900D69EED /* PersonsTableViewController.m */,
+				678669CD1A41DC3500D69EED /* NewPersonViewController.h */,
+				678669CE1A41DC3500D69EED /* NewPersonViewController.m */,
 			);
 			name = navigator;
 			sourceTree = "<group>";
@@ -342,11 +347,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678669C91A41D74900D69EED /* PersonsTableViewController.m in Sources */,
+				678669C61A41D72F00D69EED /* SchedulesTableViewController.m in Sources */,
 				678C27841A408715008090D9 /* LogInViewController.m in Sources */,
 				79C595E01A3F5D2F00FFFEA2 /* AppDelegate.m in Sources */,
 				79C595DD1A3F5D2E00FFFEA2 /* main.m in Sources */,
-				790334C81A40B30300335356 /* PersonsViewController.m in Sources */,
-				790334C41A40B2D700335356 /* SchedulesViewController.m in Sources */,
+				678669CF1A41DC3500D69EED /* NewPersonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
