@@ -114,6 +114,8 @@
 {
     // Listar tudo
     PFQuery *query = [PFQuery queryWithClassName:@"Person"];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    [query orderByAscending:@"name"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error)
         {

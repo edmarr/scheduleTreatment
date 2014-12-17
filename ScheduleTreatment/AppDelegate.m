@@ -22,6 +22,8 @@
     [Parse setApplicationId:@"nhdLD6jT2q8441YzpZI8rxFy8VWLJo1CnmddG4Di"
                   clientKey:@"SpROWIyardO0il5ASAYNmkFpn50BsXWUrnC6EHLE"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    [Parse enableLocalDatastore];
+    
     return YES;
 }
 
