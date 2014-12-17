@@ -153,6 +153,7 @@
 				678C27611A408408008090D9 /* ParseUI.framework */,
 			);
 			name = framework;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		678C27871A408720008090D9 /* controller */ = {
@@ -187,7 +188,6 @@
 		79C595CE1A3F5D2D00FFFEA2 = {
 			isa = PBXGroup;
 			children = (
-				678C27671A40841B008090D9 /* framework */,
 				79C595D91A3F5D2E00FFFEA2 /* ScheduleTreatment */,
 				79C595F31A3F5D3100FFFEA2 /* ScheduleTreatmentTests */,
 				79C595D81A3F5D2E00FFFEA2 /* Products */,
@@ -206,6 +206,7 @@
 		79C595D91A3F5D2E00FFFEA2 /* ScheduleTreatment */ = {
 			isa = PBXGroup;
 			children = (
+				678C27671A40841B008090D9 /* framework */,
 				678C275C1A4082EA008090D9 /* class */,
 				79C595E41A3F5D2F00FFFEA2 /* Main.storyboard */,
 				79C595E71A3F5D2F00FFFEA2 /* Images.xcassets */,
