@@ -63,7 +63,7 @@
 
 - (IBAction)salvarAction:(id)sender {
     [self recolherTeclados];
-   // [self salvarItemParse];
+    [self salvarItemParse];
     [self voltarViewAnterior];
 }
 
@@ -71,20 +71,25 @@
     // Criando novo objeto
     PFObject *objeto = [PFObject objectWithClassName:@"Person"];
     
-    // Preenchendo valores
-    objeto[@"name"] = self.namePerson.text;
-    objeto[@"email"] = self.emailPerson.text;
-    objeto[@"phone_number"] = self.phoneNumberPerson.text;
+    // buscando o usuario local
+    PFUser *usuarioLogado = [PFUser currentUser];
     
-    /*
-     * Metodo para salvar o paciente
-     * Segundo a documentacao do parse o saveEventually salva o cliente quando puder.
-     * Ou seja caso o dispositivo estiver sem internet e houver tentativa de salvar o objeto
-     * O mesmo vai ficar em estado de aguardando ate o dispositivo se conectar, dai os dados serao gravados remotamente
-     * Mesmo o aplicativo indo para backgroud ou sendo finalizado. Ao retornar para ativo haverao tentativas
-     */
-    [objeto saveEventually];
-    
+    if (usuarioLogado){
+        
+        // Preenchendo valores
+        objeto[@"name"] = self.namePerson.text;
+        objeto[@"email"] = self.emailPerson.text;
+        objeto[@"phone_number"] = self.phoneNumberPerson.text;
+        objeto[@"user"] = usuarioLogado;
+        /*
+         * Metodo para salvar o paciente
+         * Segundo a documentacao do parse o saveEventually salva o cliente quando puder.
+         * Ou seja caso o dispositivo estiver sem internet e houver tentativa de salvar o objeto
+         * O mesmo vai ficar em estado de aguardando ate o dispositivo se conectar, dai os dados serao gravados remotamente
+         * Mesmo o aplicativo indo para backgroud ou sendo finalizado. Ao retornar para ativo haverao tentativas
+         */
+        [objeto saveEventually];
+    }
 }
 
 @end
