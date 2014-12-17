@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SchedulesTableViewController : UITableViewController
+@property (nonatomic, strong) NSArray *list;
+- (IBAction)logout:(id)sender;
 
 @end
