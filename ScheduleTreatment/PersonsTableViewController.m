@@ -7,9 +7,12 @@
 //
 
 #import "PersonsTableViewController.h"
+#import "NewScheduleViewController.h"
 #import<Parse/Parse.h>
 
-@interface PersonsTableViewController ()
+@interface PersonsTableViewController (){
+PFObject *person;
+}
 
 @end
 
@@ -109,6 +112,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"schedeluPersonSegue"]){
+        NewScheduleViewController *vc = segue.destinationViewController;
+        [vc setPerson:person];
+    }
+
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    person = [self.list objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"schedeluPersonSegue" sender:self ];
+}
 
 -(void)atualizarRemoto
 {

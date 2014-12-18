@@ -35,14 +35,6 @@
 }
 */
 
-/**
- *  Voltar para view Anterior
- */
-- (void)voltarViewAnterior
-{
-    UINavigationController *sourceViewController = self.navigationController;
-    [sourceViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-}
 
 /**
  *  Recolher teclados
@@ -55,19 +47,24 @@
    [self.phoneNumberPerson resignFirstResponder];
 }
 
-- (IBAction)cancelarAction:(id)sender {
-    [self recolherTeclados];
-    
-    [self voltarViewAnterior];
-}
-
 - (IBAction)salvarAction:(id)sender {
     [self recolherTeclados];
-    [self salvarItemParse];
-    [self voltarViewAnterior];
+    [self saveItemParse];
+    [self clearFields];
+  
+}
+- (IBAction)ClearView:(id)sender {
+    [self clearFields];
 }
 
--(void)salvarItemParse{
+-(void)clearFields{
+    [self.namePerson setText:nil];
+    [self.emailPerson setText:nil];
+    [self.phoneNumberPerson setText:nil];
+
+}
+
+-(void)saveItemParse{
     // Criando novo objeto
     PFObject *objeto = [PFObject objectWithClassName:@"Person"];
     

@@ -30,6 +30,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self atualizarRemoto];
+    });
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -39,16 +48,23 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.list count];
 }
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellSchedule" forIndexPath:indexPath];
+    
+    PFObject *objeto = [self.list objectAtIndex:indexPath.row];
+    PFObject *person = objeto[@"person"];
+    cell.textLabel.text = person[@"name"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-yyyy HH:mm"];
+    NSString *strDate = [dateFormatter stringFromDate:objeto[@"date_hour"]];
+    cell.detailTextLabel.text = strDate;
+    NSLog(strDate);
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -95,7 +111,29 @@
 */
 
 - (IBAction)logout:(id)sender {
-    //[PFUser logOut];
-    //PFUser *currentUser = [PFUser currentUser];
+    [PFUser logOut];
+    [self performSegueWithIdentifier:@"returnLoginSegue" sender:self ];
 }
+
+-(void)atualizarRemoto
+{
+    // Listar tudo
+    PFQuery *query = [PFQuery queryWithClassName:@"Schedule"];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    //[query orderByAscending:@"person.name"];
+    [query includeKey:@"person"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error)
+        {
+            self.list = objects;
+            
+            // Parar o loading do refresh
+            [self.refreshControl endRefreshing];
+            
+            // Atualizar os dados da table view
+            [self.tableView reloadData];
+        }
+    }];
+}
+
 @end
