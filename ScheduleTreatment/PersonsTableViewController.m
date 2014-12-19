@@ -41,7 +41,7 @@ PFObject *person;
         [self remoteUpdate];
     });
     
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"MainBG.png"]]];
+    [self.view setBackgroundColor:[UIColor colorWithRed:253/255.0 green:245/255.0 blue:230/255.0 alpha:1.0]];
     
 }
 
@@ -68,7 +68,7 @@ PFObject *person;
     
     cell.textLabel.text = objeto[@"name"];
     cell.detailTextLabel.text = objeto[@"email"];
-    [cell setBackgroundColor: [UIColor colorWithRed:224/255.0 green:224/255.0 blue:224/255.0 alpha:1.0]];
+    [cell setBackgroundColor: [UIColor colorWithRed:253/255.0 green:245/255.0 blue:230/255.0 alpha:1.0]];
     
     return cell;
 }

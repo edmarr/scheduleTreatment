@@ -32,7 +32,7 @@
         PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
         [logInViewController setDelegate:self]; // Set ourselves as the delegate
         
-        [logInViewController.logInView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"MainBG.png"]]];
+        [logInViewController.logInView setBackgroundColor:[UIColor colorWithRed:253/255.0 green:245/255.0 blue:230/255.0 alpha:1.0]];
         UILabel *label = [[UILabel alloc]init];
         label.text = @"ScheduleTreatment";
         [logInViewController.logInView setLogo: label ];

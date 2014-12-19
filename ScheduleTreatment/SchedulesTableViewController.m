@@ -38,6 +38,9 @@
         [self remoteUpdate];
     });
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"MainBG.png"]]];
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor colorWithRed:96/255.0 green:96/255.0 blue:96/255.0 alpha:1.0]];
+    [self.tabBarController.tabBar setBackgroundColor: [UIColor colorWithRed:96/255.0 green:96/255.0 blue:96/255.0 alpha:1.0]];
+    
     
 }
 
@@ -64,9 +67,9 @@
     NSString *strDate = [dateFormatter stringFromDate:objeto[@"date_hour"]];
     cell.detailTextLabel.text = strDate;
     if(dateSchedule.timeIntervalSince1970 >  [NSDate new].timeIntervalSince1970){
-        [cell setBackgroundColor: [UIColor colorWithRed:224/255.0 green:224/255.0 blue:224/255.0 alpha:1.0]];
+        [cell setBackgroundColor: [UIColor colorWithRed:253/255.0 green:245/255.0 blue:230/255.0 alpha:1.0]];
     }else{
-        [cell setBackgroundColor:[UIColor colorWithRed:255/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]];
+        [cell setBackgroundColor:[UIColor colorWithRed:255/255.0 green:204/255.0 blue:204/255.0 alpha:1.0]];
     }
     
     return cell;
