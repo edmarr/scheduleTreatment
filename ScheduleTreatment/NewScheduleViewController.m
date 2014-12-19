@@ -20,6 +20,8 @@
     [self.lblName setText:person[@"name"]];
     [self.lblEmail setText:person[@"email"]];
     [self.lblPhone setText:person[@"phone_number"]];
+    
+     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"MainBG.png"]]];
 }
 
 - (void)didReceiveMemoryWarning {

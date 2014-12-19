@@ -45,7 +45,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellSchedule" textLabel="ccJ-GR-Ncs" detailTextLabel="TuX-Ow-fl1" style="IBUITableViewCellStyleSubtitle" id="TNW-YZ-DXD">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cellSchedule" textLabel="ccJ-GR-Ncs" detailTextLabel="TuX-Ow-fl1" style="IBUITableViewCellStyleSubtitle" id="TNW-YZ-DXD">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TNW-YZ-DXD" id="BHh-7y-DKC">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -188,7 +188,6 @@
         <!--New Person-->
         <scene sceneID="2Tz-9V-TO5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J9z-aU-KYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Fvm-eS-n1Y" customClass="NewPersonViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fHC-9k-diy"/>
@@ -245,6 +244,7 @@
                         <outlet property="phoneNumberPerson" destination="xSo-vc-DQW" id="CeT-q0-9Ne"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9z-aU-KYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3007" y="-489"/>
         </scene>

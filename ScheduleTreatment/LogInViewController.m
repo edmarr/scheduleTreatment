@@ -34,7 +34,7 @@
         
         [logInViewController.logInView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"MainBG.png"]]];
         UILabel *label = [[UILabel alloc]init];
-        label.text = @"Teste";
+        label.text = @"ScheduleTreatment";
         [logInViewController.logInView setLogo: label ];
         
         // Create the sign up view controller

@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"MainBG.png"]]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,6 +46,7 @@
    [self.namePerson resignFirstResponder];
    [self.emailPerson resignFirstResponder];
    [self.phoneNumberPerson resignFirstResponder];
+   
 }
 
 - (IBAction)salvarAction:(id)sender {

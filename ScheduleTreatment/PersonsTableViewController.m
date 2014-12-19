@@ -38,8 +38,11 @@ PFObject *person;
     [super viewWillAppear:animated];
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self atualizarRemoto];
+        [self remoteUpdate];
     });
+    
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"MainBG.png"]]];
+    
 }
 
 #pragma mark - Table view data source
@@ -65,6 +68,7 @@ PFObject *person;
     
     cell.textLabel.text = objeto[@"name"];
     cell.detailTextLabel.text = objeto[@"email"];
+    [cell setBackgroundColor: [UIColor colorWithRed:224/255.0 green:224/255.0 blue:224/255.0 alpha:1.0]];
     
     return cell;
 }
@@ -127,7 +131,7 @@ PFObject *person;
     [self performSegueWithIdentifier:@"schedeluPersonSegue" sender:self ];
 }
 
--(void)atualizarRemoto
+-(void)remoteUpdate
 {
     // Listar tudo
     PFQuery *query = [PFQuery queryWithClassName:@"Person"];
