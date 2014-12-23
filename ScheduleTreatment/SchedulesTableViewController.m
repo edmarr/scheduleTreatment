@@ -130,6 +130,13 @@
 {
     // Listar tudo
     PFQuery *query = [PFQuery queryWithClassName:@"Schedule"];
+    NSDateFormatter *gdf = [NSDateFormatter new];
+    [gdf  setTimeZone: [NSTimeZone timeZoneWithName:@"GMT"]];
+    unsigned int flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    NSDateComponents* components = [calendar components:flags fromDate:[NSDate new ]];
+    NSDate* dateOnly = [[calendar dateFromComponents:components] dateByAddingTimeInterval:[[NSTimeZone localTimeZone]secondsFromGMT]];
+    [query whereKey:@"date_hour" greaterThanOrEqualTo: dateOnly];
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
     [query orderByAscending:@"date_hour"];
     [query includeKey:@"person"];
