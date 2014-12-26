@@ -35,7 +35,7 @@
         [logInViewController.logInView setBackgroundColor:[UIColor colorWithRed:253/255.0 green:245/255.0 blue:230/255.0 alpha:1.0]];
         UILabel *label = [[UILabel alloc]init];
         label.text = @"ScheduleTreatment";
-        [logInViewController.logInView setLogo: label ];
+        [logInViewController.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Schedule.png"]]];
         
         // Create the sign up view controller
         PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];

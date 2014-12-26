@@ -7,10 +7,13 @@
 //
 
 #import "SchedulesTableViewController.h"
+#import "ChangeScheduleViewController.h"
 #import <Parse/Parse.h>
 
 @interface SchedulesTableViewController ()
-
+{
+    PFObject *schedule;
+}
 @end
 
 @implementation SchedulesTableViewController
@@ -19,10 +22,10 @@
     [super viewDidLoad];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,17 +87,16 @@
  }
  */
 
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        PFObject *obj = [self.list objectAtIndex:indexPath.row];
+        [obj deleteInBackground];
+        [self remoteUpdate];
+    }
+}
+
 
 /*
  // Override to support rearranging the table view.
@@ -110,15 +112,19 @@
  }
  */
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"changeScheduleSegue"]){
+        ChangeScheduleViewController *vc = segue.destinationViewController;
+        [vc setSchedule:schedule];
+    }
+    
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    schedule = [self.list objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"changeScheduleSegue" sender:self ];
+}
 
 - (IBAction)logout:(id)sender {
     [PFUser logOut];
