@@ -87,7 +87,7 @@
             </objects>
             <point key="canvasLocation" x="2309" y="-1175"/>
         </scene>
-        <!--Title-->
+        <!--Change Schedule View Controller-->
         <scene sceneID="15Q-9J-Rvv">
             <objects>
                 <viewController id="iji-q9-PYS" customClass="ChangeScheduleViewController" sceneMemberID="viewController">
@@ -130,7 +130,7 @@
                             <constraint firstAttribute="centerY" secondItem="wH9-sh-eLr" secondAttribute="centerY" constant="31" id="zwi-hz-i3a"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="flr-1z-fjt">
+                    <navigationItem key="navigationItem" id="flr-1z-fjt">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Jnk-Zf-nTd">
                             <connections>
                                 <action selector="saveSchedule:" destination="iji-q9-PYS" id="L1s-hG-pBl"/>

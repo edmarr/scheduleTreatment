@@ -30,6 +30,7 @@
 		678C27841A408715008090D9 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678C277F1A408715008090D9 /* LogInViewController.m */; };
 		678C278B1A40896E008090D9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678C278A1A40896E008090D9 /* Social.framework */; };
 		678C278D1A408988008090D9 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678C278C1A408988008090D9 /* Accounts.framework */; };
+		67AD5E051A4DAB9A0012715A /* ChangeScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AD5E041A4DAB9A0012715A /* ChangeScheduleViewController.m */; };
 		79C595DD1A3F5D2E00FFFEA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C595DC1A3F5D2E00FFFEA2 /* main.m */; };
 		79C595E01A3F5D2F00FFFEA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C595DF1A3F5D2F00FFFEA2 /* AppDelegate.m */; };
 		79C595E61A3F5D2F00FFFEA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C595E41A3F5D2F00FFFEA2 /* Main.storyboard */; };
@@ -77,6 +78,8 @@
 		678C277F1A408715008090D9 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		678C278A1A40896E008090D9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		678C278C1A408988008090D9 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		67AD5E031A4DAB9A0012715A /* ChangeScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeScheduleViewController.h; sourceTree = "<group>"; };
+		67AD5E041A4DAB9A0012715A /* ChangeScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeScheduleViewController.m; sourceTree = "<group>"; };
 		79C595D71A3F5D2E00FFFEA2 /* ScheduleTreatment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleTreatment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C595DB1A3F5D2E00FFFEA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79C595DC1A3F5D2E00FFFEA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 		790334C91A40B32200335356 /* navigator */ = {
 			isa = PBXGroup;
 			children = (
+				67AD5E031A4DAB9A0012715A /* ChangeScheduleViewController.h */,
+				67AD5E041A4DAB9A0012715A /* ChangeScheduleViewController.m */,
 				678669C41A41D72F00D69EED /* SchedulesTableViewController.h */,
 				678669C51A41D72F00D69EED /* SchedulesTableViewController.m */,
 				678669C71A41D74900D69EED /* PersonsTableViewController.h */,
@@ -355,6 +360,7 @@
 				678669D21A426B4600D69EED /* NewScheduleViewController.m in Sources */,
 				678669C91A41D74900D69EED /* PersonsTableViewController.m in Sources */,
 				678669C61A41D72F00D69EED /* SchedulesTableViewController.m in Sources */,
+				67AD5E051A4DAB9A0012715A /* ChangeScheduleViewController.m in Sources */,
 				678C27841A408715008090D9 /* LogInViewController.m in Sources */,
 				79C595E01A3F5D2F00FFFEA2 /* AppDelegate.m in Sources */,
 				79C595DD1A3F5D2E00FFFEA2 /* main.m in Sources */,
