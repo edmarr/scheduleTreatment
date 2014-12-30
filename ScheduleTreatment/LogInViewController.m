@@ -35,13 +35,13 @@
         [logInViewController.logInView setBackgroundColor:[UIColor colorWithRed:253/255.0 green:245/255.0 blue:230/255.0 alpha:1.0]];
         UILabel *label = [[UILabel alloc]init];
         label.text = @"ScheduleTreatment";
-        [logInViewController.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"schedule.png"]]];
+        [logInViewController.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Schedule.png"]]];
         
         // Create the sign up view controller
         PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
         [signUpViewController setDelegate:self]; // Set ourselves as the delegate
         [signUpViewController.signUpView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"MainBG.png"]]];
-        [signUpViewController.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"schedule.png"]]];
+        [signUpViewController.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Schedule.png"]]];
         
         // Assign our sign up controller to be displayed from the login controller
         [logInViewController setSignUpController:signUpViewController];
